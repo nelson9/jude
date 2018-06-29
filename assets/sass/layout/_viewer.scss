@@ -199,7 +199,7 @@
 		}
 
 		@include breakpoint('<=medium') {
-			width: 100%;
+			// width: 100%;
 
 			.inner {
 				.toggle {

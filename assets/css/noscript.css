@@ -16,7 +16,7 @@ body:before {
   width: calc(100% - 22.5em * 0.333333333);
   height: 4em;
   margin-top: -2em;
-  color: #282828;
+  color: white;
   cursor: default;
   font-size: 3em;
   line-height: 4em;

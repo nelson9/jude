@@ -87,8 +87,7 @@ html {
   box-sizing: inherit; }
 
 html, body {
-  background-color: #101010;
-  overflow: hidden; }
+  background-color: #fff; }
 
 /* Type */
 html {
@@ -602,6 +601,108 @@ ul.icons {
     ul.icons li .icon:before {
       font-size: 1.5rem; }
 
+.blog {
+  padding: 6em 3em 0 0;
+  /* // Styles for fun
+    // ------------------------------------------------- */ }
+  .blog:hover {
+    background-color: #fbf9fa; }
+  .blog main {
+    display: flex;
+    flex-wrap: wrap; }
+    @media screen and (min-width: 981px) {
+      .blog main {
+        justify-content: flex-end; } }
+    @supports (display: grid) {
+      .blog main {
+        display: grid;
+        grid-gap: 2.2rem;
+        grid-template-columns: 1fr 1fr; }
+        @media screen and (min-width: 981px) {
+          .blog main {
+            grid-template-columns: repeat(4, 1fr); } } }
+  @media screen and (min-width: 981px) {
+    .blog .intro {
+      flex: 0 0 calc(50% - 3rem); } }
+  @supports (display: grid) {
+    .blog .intro {
+      grid-column: 1 / span 2; }
+      @media screen and (min-width: 981px) {
+        .blog .intro {
+          grid-column: 2 / span 2; } } }
+  @media screen and (min-width: 981px) {
+    .blog .summary {
+      order: 1; } }
+  @supports (display: grid) {
+    .blog .summary {
+      grid-column: 1 / span 2; }
+      @media screen and (min-width: 981px) {
+        .blog .summary {
+          grid-column: 4 / span 1; } } }
+  @supports (display: grid) {
+    .blog .post-content {
+      grid-column: 1 / span 2; }
+      @media screen and (min-width: 981px) {
+        .blog .post-content {
+          grid-column: 2; } } }
+  @media screen and (min-width: 981px) {
+    .blog .post-content {
+      flex: 0 0 calc(50% - 3rem); }
+      @supports (display: grid) {
+        .blog .post-content {
+          grid-column: 2 / span 2; } } }
+  .blog .byline,
+  .blog .social {
+    flex: 0 0 calc(50% - 3rem);
+    height: 70px; }
+    @media screen and (min-width: 981px) {
+      @supports (display: flex) {
+        .blog .byline,
+        .blog .social {
+          flex: 0 0 calc(25% - 3rem); } } }
+  .blog article {
+    margin: 0.5rem;
+    padding: 0 1rem 2rem 0; }
+    @media screen and (min-width: 981px) {
+      @supports (display: flex) {
+        .blog article {
+          flex: 0 0 calc(25% - 3rem); } } }
+  .blog .page-title {
+    color: #00D3B7;
+    font-size: calc(3rem + .25vw);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 1rem auto;
+    max-width: calc(70rem + .25vw);
+    text-align: center; }
+  .blog .post-title {
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 0;
+    margin-top: 0; }
+    @supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+      .blog .post-title:first-letter {
+        font-weight: 700;
+        initial-letter: 2;
+        -webkit-initial-letter: 2; } }
+  .blog h2 {
+    line-height: 1.2; }
+  .blog p,
+  .blog .social a,
+  .blog h3 {
+    margin-top: 1rem; }
+  .blog .social {
+    display: flex;
+    justify-content: flex-end; }
+    .blog .social a {
+      font-size: 1.5rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem; }
+  .blog .meta {
+    font-family: Georgia, serif;
+    font-size: calc(0.7rem + 0.25vw);
+    font-style: italic; }
+
 /* Main */
 #main {
   -moz-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
@@ -615,11 +716,11 @@ ul.icons {
   height: 100%;
   background: #fff;
   outline: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   text-align: left;
   visibility: visible;
   z-index: 10000;
+  background-color: #fce3f2;
   left: 0; }
   #main .toggle {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -933,18 +1034,16 @@ ul.icons {
     #viewer {
       width: calc(100% - 19em); } }
   @media screen and (max-width: 980px) {
-    #viewer {
-      width: 100%; }
-      #viewer .inner .toggle {
-        -moz-transition: opacity 0.75s ease;
-        -webkit-transition: opacity 0.75s ease;
-        -ms-transition: opacity 0.75s ease;
-        transition: opacity 0.75s ease;
-        background-image: url("images/open.svg");
-        opacity: 0;
-        left: 0; }
-      body.fullscreen #viewer .inner .toggle {
-        opacity: 1; } }
+    #viewer .inner .toggle {
+      -moz-transition: opacity 0.75s ease;
+      -webkit-transition: opacity 0.75s ease;
+      -ms-transition: opacity 0.75s ease;
+      transition: opacity 0.75s ease;
+      background-image: url("images/open.svg");
+      opacity: 0;
+      left: 0; }
+    body.fullscreen #viewer .inner .toggle {
+      opacity: 1; } }
   @media screen and (max-width: 736px) {
     #viewer .inner .toggle {
       background-size: 32px 32px; }
